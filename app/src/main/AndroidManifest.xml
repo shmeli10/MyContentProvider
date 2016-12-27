@@ -1,0 +1,25 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.os1.mycontentprovider">
+
+
+    <permission android:name="com.example.os1.mycontentprovider.READ_DATABASE" android:protectionLevel="normal" />
+    <permission android:name="com.example.os1.mycontentprovider.WRITE_DATABASE" android:protectionLevel="normal" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <provider
+            android:authorities="com.example.os1.mycontentprovider.AddressBook"
+            android:name=".MyContactsProvider"
+            android:exported="true"
+            android:readPermission="com.example.os1.mycontentprovider.READ_DATABASE"
+            android:writePermission="com.example.os1.mycontentprovider.WRITE_DATABASE" />
+
+    </application>
+
+</manifest>
